@@ -1,0 +1,250 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/xat/castnow#readme">castnow (v0.4.18)</a>
+</h1>
+<h4>commandline chromecast player</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.castnow">module castnow</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.castnow.attach">
+            function <span class="apidocSignatureSpan">castnow.</span>attach
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.castnow.launch">
+            function <span class="apidocSignatureSpan">castnow.</span>launch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.castnow.use">
+            function <span class="apidocSignatureSpan">castnow.</span>use
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">castnow.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">castnow.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">castnow.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">castnow.</span>mw</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.castnow" id="apidoc.module.castnow">module castnow</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.castnow.attach" id="apidoc.element.castnow.attach">
+        function <span class="apidocSignatureSpan">castnow.</span>attach
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attach = function () {
+  var args = Array.prototype.slice.call(arguments, 0);
+  var sig = (function () {
+    var ret = [];
+    for (var i = 0, len = args.length; i &lt; len; i++) {
+      ret.push(toType(args[i]));
+    }
+    return ret;
+  })().join('::');
+
+  if (map[sig]) {
+    if (map[sig].inject) args.unshift(input);
+    return map[sig].fn.apply(ctx || null, args);
+  }
+
+  return input &amp;&amp; input.apply(ctx || null, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var file = ctx.options.playlist.shift();
+if (ctx.options.loop) ctx.options.playlist.push(file);
+next();
+});
+
+if (!opts.playlist) {
+debug('attaching...');
+player.<span class="apidocCodeKeywordSpan">attach</span>(opts, ctrl);
+} else {
+debug('launching...');
+player.launch(opts, ctrl);
+}
+
+process.on('SIGINT', function() {
+process.exit();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.castnow.launch" id="apidoc.element.castnow.launch">
+        function <span class="apidocSignatureSpan">castnow.</span>launch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">launch = function () {
+  var args = Array.prototype.slice.call(arguments, 0);
+  var sig = (function () {
+    var ret = [];
+    for (var i = 0, len = args.length; i &lt; len; i++) {
+      ret.push(toType(args[i]));
+    }
+    return ret;
+  })().join('::');
+
+  if (map[sig]) {
+    if (map[sig].inject) args.unshift(input);
+    return map[sig].fn.apply(ctx || null, args);
+  }
+
+  return input &amp;&amp; input.apply(ctx || null, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+if (!opts.playlist) {
+  debug('attaching...');
+  player.attach(opts, ctrl);
+} else {
+  debug('launching...');
+  player.<span class="apidocCodeKeywordSpan">launch</span>(opts, ctrl);
+}
+
+process.on('SIGINT', function() {
+  process.exit();
+});
+
+process.on('exit', function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.castnow.use" id="apidoc.element.castnow.use">
+        function <span class="apidocSignatureSpan">castnow.</span>use
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    inter = setInterval(function() {
+      ui.setLabel('state', 'State', capitalize(status) + dots());
+      ui.render();
+    }, 300);
+  };
+})();
+
+player.<span class="apidocCodeKeywordSpan">use</span>(function(ctx, next) {
+  ctx.on('status', logState);
+  next();
+});
+
+player.use(stdin);
+player.use(directories);
+player.use(torrent);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>

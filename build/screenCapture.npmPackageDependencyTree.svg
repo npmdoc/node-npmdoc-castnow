@@ -200,11 +200,11 @@
 <tspan x="10" y="3162">  │ │ │ │ ├── run-series@1.1.4 </tspan>
 <tspan x="10" y="3178">  │ │ │ │ ├─┬ simple-peer@6.4.4 </tspan>
 <tspan x="10" y="3194">  │ │ │ │ │ ├── get-browser-rtc@1.0.2 </tspan>
-<tspan x="10" y="3210">  │ │ │ │ │ └─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="3210">  │ │ │ │ │ └─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="3226">  │ │ │ │ │   ├── isarray@1.0.0 </tspan>
 <tspan x="10" y="3242">  │ │ │ │ │   └── string_decoder@1.0.0 </tspan>
 <tspan x="10" y="3258">  │ │ │ │ ├─┬ simple-websocket@4.3.1 </tspan>
-<tspan x="10" y="3274">  │ │ │ │ │ ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="3274">  │ │ │ │ │ ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="3290">  │ │ │ │ │ │ ├── isarray@1.0.0 </tspan>
 <tspan x="10" y="3306">  │ │ │ │ │ │ └── string_decoder@1.0.0 </tspan>
 <tspan x="10" y="3322">  │ │ │ │ │ └─┬ ws@2.2.3 </tspan>
@@ -264,7 +264,7 @@
 <tspan x="10" y="4186">  │ │ ├─┬ commander@2.9.0 </tspan>
 <tspan x="10" y="4202">  │ │ │ └── graceful-readlink@1.0.1 </tspan>
 <tspan x="10" y="4218">  │ │ ├─┬ concat-stream@1.6.0 </tspan>
-<tspan x="10" y="4234">  │ │ │ ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="4234">  │ │ │ ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="4250">  │ │ │ │ ├── buffer-shims@1.0.0 </tspan>
 <tspan x="10" y="4266">  │ │ │ │ ├── core-util-is@1.0.2 </tspan>
 <tspan x="10" y="4282">  │ │ │ │ ├── isarray@1.0.0 </tspan>
