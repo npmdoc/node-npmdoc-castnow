@@ -1,9 +1,14 @@
-# api documentation for  [castnow (v0.4.18)](https://github.com/xat/castnow#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-castnow.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-castnow) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-castnow.svg)](https://travis-ci.org/npmdoc/node-npmdoc-castnow)
+# npmdoc-castnow
+
+#### api documentation for  [castnow (v0.4.18)](https://github.com/xat/castnow#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-castnow.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-castnow) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-castnow.svg)](https://travis-ci.org/npmdoc/node-npmdoc-castnow)
+
 #### commandline chromecast player
 
-[![NPM](https://nodei.co/npm/castnow.png?downloads=true)](https://www.npmjs.com/package/castnow)
+[![NPM](https://nodei.co/npm/castnow.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/castnow)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-castnow/build/screenCapture.buildNpmdoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-castnow%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-castnow/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-castnow/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-castnow/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-castnow/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-castnow/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-castnow/build/screenCapture.npmPackageListing.svg)
 
@@ -75,13 +80,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "xat",
-            "email": "simon@soped.com"
+            "name": "xat"
         }
     ],
     "name": "castnow",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/xat/castnow.git"
@@ -91,133 +94,6 @@
     },
     "version": "0.4.18"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module castnow](#apidoc.module.castnow)
-1.  [function <span class="apidocSignatureSpan">castnow.</span>attach ()](#apidoc.element.castnow.attach)
-1.  [function <span class="apidocSignatureSpan">castnow.</span>launch ()](#apidoc.element.castnow.launch)
-1.  [function <span class="apidocSignatureSpan">castnow.</span>use ()](#apidoc.element.castnow.use)
-1.  number <span class="apidocSignatureSpan">castnow.</span>_eventsCount
-1.  object <span class="apidocSignatureSpan">castnow.</span>_events
-1.  object <span class="apidocSignatureSpan">castnow.</span>domain
-1.  object <span class="apidocSignatureSpan">castnow.</span>mw
-
-
-
-# <a name="apidoc.module.castnow"></a>[module castnow](#apidoc.module.castnow)
-
-#### <a name="apidoc.element.castnow.attach"></a>[function <span class="apidocSignatureSpan">castnow.</span>attach ()](#apidoc.element.castnow.attach)
-- description and source-code
-```javascript
-attach = function () {
-  var args = Array.prototype.slice.call(arguments, 0);
-  var sig = (function () {
-    var ret = [];
-    for (var i = 0, len = args.length; i < len; i++) {
-      ret.push(toType(args[i]));
-    }
-    return ret;
-  })().join('::');
-
-  if (map[sig]) {
-    if (map[sig].inject) args.unshift(input);
-    return map[sig].fn.apply(ctx || null, args);
-  }
-
-  return input && input.apply(ctx || null, args);
-}
-```
-- example usage
-```shell
-...
-var file = ctx.options.playlist.shift();
-if (ctx.options.loop) ctx.options.playlist.push(file);
-next();
-});
-
-if (!opts.playlist) {
-debug('attaching...');
-player.attach(opts, ctrl);
-} else {
-debug('launching...');
-player.launch(opts, ctrl);
-}
-
-process.on('SIGINT', function() {
-process.exit();
-...
-```
-
-#### <a name="apidoc.element.castnow.launch"></a>[function <span class="apidocSignatureSpan">castnow.</span>launch ()](#apidoc.element.castnow.launch)
-- description and source-code
-```javascript
-launch = function () {
-  var args = Array.prototype.slice.call(arguments, 0);
-  var sig = (function () {
-    var ret = [];
-    for (var i = 0, len = args.length; i < len; i++) {
-      ret.push(toType(args[i]));
-    }
-    return ret;
-  })().join('::');
-
-  if (map[sig]) {
-    if (map[sig].inject) args.unshift(input);
-    return map[sig].fn.apply(ctx || null, args);
-  }
-
-  return input && input.apply(ctx || null, args);
-}
-```
-- example usage
-```shell
-...
-});
-
-if (!opts.playlist) {
-  debug('attaching...');
-  player.attach(opts, ctrl);
-} else {
-  debug('launching...');
-  player.launch(opts, ctrl);
-}
-
-process.on('SIGINT', function() {
-  process.exit();
-});
-
-process.on('exit', function() {
-...
-```
-
-#### <a name="apidoc.element.castnow.use"></a>[function <span class="apidocSignatureSpan">castnow.</span>use ()](#apidoc.element.castnow.use)
-- description and source-code
-```javascript
-use = function () { [native code] }
-```
-- example usage
-```shell
-...
-    inter = setInterval(function() {
-      ui.setLabel('state', 'State', capitalize(status) + dots());
-      ui.render();
-    }, 300);
-  };
-})();
-
-player.use(function(ctx, next) {
-  ctx.on('status', logState);
-  next();
-});
-
-player.use(stdin);
-player.use(directories);
-player.use(torrent);
-...
 ```
 
 
